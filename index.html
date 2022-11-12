@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+
+    <title>Pokenmonnz</title>
+</head>
+
+<body>
+    <div style="display: inline-block; position: relative;">
+        <div id="enemyInterface"
+            class="interface"
+            style="
+                opacity: 0;
+                background-color: floralwhite;
+                position: absolute;
+                width: 450px;
+                height: 50px;
+                top: 0;
+                left: 100px;
+                display: none;
+            "
+        >
+            <h3 class="battleName">Acerb</h3>
+            <div class="healthbarParent">
+                <div class="healthbarBackground"></div>
+                <div id="enemyHealthbar"></div>
+            </div>
+        </div>
+
+        <div id="playerInterface"
+            class="interface"
+            style="
+                opacity: 0;
+                background-color: floralwhite;
+                position: absolute;
+                width: 400px;
+                height: 50px;
+                bottom: 160px;
+                right: 50px;
+                display: none;
+            "
+        >
+            <h2 class="battleName">Kemina</h2>
+            <div class="healthbarParent">
+                <div class="healthbarBackground"></div>
+                <div id="playerHealthbar"></div>
+            </div>
+        </div>
+
+        <div id="blackFlash"
+            style="
+                pointer-events: none; 
+                position: absolute; 
+                opacity: 0; 
+                top: 0; 
+                right: 0; 
+                bottom: 0; 
+                left: 0; 
+                background-color: black;
+            "
+        ></div>
+        <canvas></canvas>
+
+        <div id="battleInterface" 
+            style="
+                opacity: 0;
+                background-color: antiquewhite;
+                height: 160px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-top: 4px solid black;
+                display: none;
+            "
+        >
+            <div id="dialogueContainer"
+                style="
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background-color: antiquewhite;
+                    padding: 24px;
+                    font-size: 20px;
+                    display: none;
+                "
+            ></div>
+            <div id="attacksContainer"
+                style="
+                    width: 66.66%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                "
+            ></div>
+            <div style="
+                display: flex;
+                width: 33.33%;
+                justify-content: center;
+                align-items: center;
+                border-left: 4px solid black;
+                font-size: 16px;
+            ">
+                <h4 id="attackType">Attack Type</h4>
+            </div>
+        </div>
+    </div> 
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./data/battleZones.js"></script>
+    <script src="./data/collisions.js"></script>
+    <script src="./data/attacks.js"></script>
+    <script src="./data/players.js"></script>
+    <script src="./data/monsters.js"></script>
+    <script src="./classes/Boundary.js"></script>
+    <script src="./classes/Sprite.js"></script>
+    <!-- <script src="./classes/Monster.js"></script> -->
+    <script src="./index.js"></script>
+    <script src="./battle.js"></script>
+
+</html>
